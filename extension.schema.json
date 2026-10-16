@@ -1,0 +1,678 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://toolhub.local/schemas/extension.schema.json",
+  "title": "ToolHub extension v1/v2",
+  "description": "Maximum 256 KiB. v1 data contracts remain compatible; v2 contributes native module references, opaque sandboxed frontend views, theme tokens and bounded dependencies. Rust validator enforces reserved namespace, portability and lifecycle contracts. Since beta.4: declarative CLI contribution, rendered by the native host with per-run confirmation; scripts have no execution bridge. Rust additionally validates placeholders and exactly one input/output.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "id",
+    "name",
+    "description",
+    "version",
+    "author",
+    "license",
+    "platforms",
+    "min_toolhub_version"
+  ],
+  "properties": {
+    "schema": {
+      "enum": [
+        "toolhub.extension/v1",
+        "toolhub.extension/v2"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 96
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "windows",
+          "macos",
+          "linux"
+        ]
+      }
+    },
+    "min_toolhub_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32
+    },
+    "recognition": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "name",
+        "version",
+        "kind",
+        "capabilities",
+        "tools"
+      ],
+      "properties": {
+        "schema": {
+          "const": "toolhub.resource/v1"
+        },
+        "kind": {
+          "const": "recognition"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "capabilities": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        },
+        "tools": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "definition_id",
+              "name",
+              "vendor",
+              "file_names",
+              "capabilities"
+            ],
+            "properties": {
+              "definition_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "vendor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "file_names": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 16,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128,
+                  "pattern": "^[^/\\\\:*?\\x00-\\x1f]+$"
+                }
+              },
+              "path_substrings": {
+                "type": "array",
+                "maxItems": 8,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                }
+              },
+              "capabilities": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 32,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "skill-bundle.schema.json"
+      }
+    },
+    "host_module": {
+      "enum": [
+        "tools",
+        "programs",
+        "artifacts",
+        "envs",
+        "skills",
+        "market",
+        "tasks"
+      ]
+    },
+    "navigation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "icon",
+        "order"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "icon": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      }
+    },
+    "views": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "icon",
+          "order",
+          "html"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "icon": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+          },
+          "html": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 65536
+          },
+          "css": {
+            "type": "string",
+            "maxLength": 32768
+          },
+          "script": {
+            "type": "string",
+            "maxLength": 65536
+          }
+        }
+      }
+    },
+    "permissions": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 6,
+      "items": {
+        "enum": [
+          "tools.read",
+          "programs.read",
+          "programs.propose",
+          "skills.read",
+          "environments.read",
+          "tasks.read"
+        ]
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "min_version"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 96
+          },
+          "min_version": {
+            "type": "string",
+            "maxLength": 32
+          }
+        }
+      }
+    },
+    "theme": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "colors",
+        "layout",
+        "density",
+        "sidebar_width",
+        "radius"
+      ],
+      "properties": {
+        "colors": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {
+            "enum": [
+              "bg",
+              "panel",
+              "panel-soft",
+              "ink",
+              "ink-2",
+              "muted",
+              "line",
+              "accent",
+              "accent-soft",
+              "ok",
+              "ok-soft",
+              "warn",
+              "warn-soft",
+              "danger",
+              "danger-soft"
+            ]
+          },
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$"
+          }
+        },
+        "layout": {
+          "enum": [
+            "left",
+            "right",
+            "top"
+          ]
+        },
+        "density": {
+          "enum": [
+            "comfortable",
+            "compact"
+          ]
+        },
+        "sidebar_width": {
+          "type": "integer",
+          "minimum": 200,
+          "maximum": 340
+        },
+        "radius": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 24
+        }
+      }
+    },
+    "cli": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "icon": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "tool_definition": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "actions": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^[a-z0-9_]+$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              "parameters": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 8,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 48,
+                      "pattern": "^[a-z0-9_]+$"
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 64
+                    },
+                    "kind": {
+                      "enum": [
+                        "input_file",
+                        "output_file",
+                        "choice"
+                      ]
+                    },
+                    "extensions": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 24,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 12,
+                        "pattern": "^[a-z0-9]+$"
+                      }
+                    },
+                    "choices": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 16,
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "label": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 64
+                          },
+                          "value": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 128
+                          }
+                        },
+                        "required": [
+                          "label",
+                          "value"
+                        ]
+                      }
+                    },
+                    "default": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 128
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "label",
+                    "kind"
+                  ],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "kind": {
+                            "const": "choice"
+                          }
+                        }
+                      },
+                      "then": {
+                        "required": [
+                          "choices",
+                          "default"
+                        ],
+                        "not": {
+                          "required": [
+                            "extensions"
+                          ]
+                        }
+                      },
+                      "else": {
+                        "required": [
+                          "extensions"
+                        ],
+                        "not": {
+                          "anyOf": [
+                            {
+                              "required": [
+                                "choices"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "default"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "args": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 128,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4096
+                }
+              },
+              "timeout_ms": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 300000
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "description",
+              "parameters",
+              "args",
+              "timeout_ms"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "icon",
+        "order",
+        "tool_definition",
+        "actions"
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "required": [
+        "recognition"
+      ],
+      "properties": {
+        "recognition": {
+          "type": "object"
+        }
+      }
+    },
+    {
+      "required": [
+        "skills"
+      ],
+      "properties": {
+        "skills": {
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "host_module"
+      ]
+    },
+    {
+      "required": [
+        "views"
+      ],
+      "properties": {
+        "views": {
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "theme"
+      ]
+    },
+    {
+      "required": [
+        "cli"
+      ]
+    }
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema": {
+            "const": "toolhub.extension/v1"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "host_module"
+              ]
+            },
+            {
+              "required": [
+                "navigation"
+              ]
+            },
+            {
+              "required": [
+                "views"
+              ]
+            },
+            {
+              "required": [
+                "theme"
+              ]
+            },
+            {
+              "required": [
+                "permissions"
+              ]
+            },
+            {
+              "required": [
+                "dependencies"
+              ]
+            },
+            {
+              "required": [
+                "cli"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Verification — 2026-10-16
+
+Tested on Windows with the matching ToolHub beta.4 development host. Synthetic local media; no user media or production trust changes. This catalog contains no FFmpeg binary.
+
+- Host workspace: 228 Rust tests passed, one existing ignored; TypeScript SDK four tests and strict types passed; UI production build passed. Final repository-link UI/native desktop change additionally passed all 16 desktop tests.
+- Native workbench: CLI contribution install, type/platform filtering, navigation, three operation tabs, read-only choose-before-edit fields, disabled run without a trusted engine, shared Skill discovery, disable/re-enable and narrow viewport layout.
+- Real owner-selected FFmpeg: compression, MP4 conversion and M4A extraction produced nonempty declared outputs; generated files were decoded successfully. Existing output rejected without byte changes; missing audio produced a real nonzero error; native task cancellation stopped the owned process. Explicit controller confirmation worked with auto approval disabled. Selected-task final logs and exit code displayed.
+- Actual paired MCP: sixteen generic tools; installed FFmpeg workflow found and instructions loaded only on demand.
+- Static catalog: all four packages, metadata and SHA-256 values consistent; browser type/platform/text filtering and local download links passed.
+
+Limits: the native file-dialog implementation compiled, but OS dialog interaction was not automated because the Windows capture service did not expose the isolated test window. Tests passed selected synthetic paths to the real native preview/start RPC; execution was not mocked. macOS execution and physical Mac interaction remain unverified/unsupported as documented. This is not independent security certification, a binary signature or a published ToolHub host release.
