@@ -16,6 +16,8 @@ ToolHub 主项目：[xiyuxiao1314/ToolHub](https://github.com/xiyuxiao1314/ToolH
 
 ## 选择扩展
 
+在 [Releases](https://github.com/xiyuxiao1314/ToolHub-Extensions/releases/tag/design-studio-v0.2.0) 下载单独的设计台包或完整源码目录 ZIP；主程序下载请到 [ToolHub Releases](https://github.com/xiyuxiao1314/ToolHub/releases)。两仓库独立版本化，不需要每次更新插件都重新安装主程序。
+
 下载仓库 ZIP 并解压后，可直接用浏览器打开 [index.html](index.html)，按分类、平台、名称与标签筛选；打开包的 JSON 文件并保存，再到 ToolHub **扩展 → 导入扩展包 → 核对内容 → 确认安装**。GitHub 页面上的 index.html 是源码预览，网页托管未自动启用。
 
 | 扩展 | 用途 | 最低 ToolHub | 平台说明 |
@@ -26,7 +28,7 @@ ToolHub 主项目：[xiyuxiao1314/ToolHub](https://github.com/xiyuxiao1314/ToolH
 | [工具速览](packages/workspace/1.0.0/workspace.toolhub-extension.json) | 独立查询页面、受限 SDK 示例 | 0.3.0-beta.3 | 随宿主支持 |
 | [Blender 本机渲染](packages/blender/1.0.0/blender.toolhub-extension.json) | 本机识别规则与跨 Agent 渲染流程 | 0.3.0-beta.3 | 工具依赖需要自行准备 |
 
-**宿主版本提醒：** CLI 面板需要 beta.4；设计台需要 beta.6 新增的包专属预设存储。beta.5 不包含该接口，请使用匹配的开发版并以每项 min_toolhub_version 为准。设计台当前为本地开发内容，尚未发布新宿主安装包；目录收录不等于每个平台都经过交互验收。
+**宿主版本提醒：** CLI 面板需要 beta.4；设计台需要 beta.6 新增的包专属预设存储。beta.5 不包含该接口，请使用匹配版本并以每项 min_toolhub_version 为准。设计台 0.2.0 与配套 [ToolHub beta.6](https://github.com/xiyuxiao1314/ToolHub/releases/tag/v0.3.0-beta.6) 分别发布；目录收录不等于每个平台都经过交互验收。
 
 ## 设计台
 

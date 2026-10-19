@@ -9,3 +9,7 @@ Tested on Windows with the matching ToolHub beta.4 development host. Synthetic l
 - Static catalog: all four packages, metadata and SHA-256 values consistent; browser type/platform/text filtering and local download links passed.
 
 Limits: the native file-dialog implementation compiled, but OS dialog interaction was not automated because the Windows capture service did not expose the isolated test window. Tests passed selected synthetic paths to the real native preview/start RPC; execution was not mocked. macOS execution and physical Mac interaction remain unverified/unsupported as documented. This is not independent security certification, a binary signature or a published ToolHub host release.
+
+## Design Studio 0.2.0 — 2026-10-19
+
+Twelve visual presets/model bounds/unsafe inputs, structure/navigation/style/content/platform combinations, strict v1 migration and HTML escaping passed. Native Windows WebView2 ran eleven workflow groups plus responsive mobile controls, camera/keyboard pan, deep-page expansion/focus return, dynamic reduced-motion and virtual row bounds without runtime/CSP errors. Formal 0.1→0.2 install preserved drafts/presets across reload; exported standalone HTML ran its interactions. The unchanged default builder reproduces the exact 116681-byte manifest (SHA-256 c8c6cc28f7e03ffddb1a6d4c1ad07cc35966876ebb717ef581b626c644cc1091). All five catalog entries, paths and raw SHA-256 hashes pass validation. These are maintainer checks, not independent certification; macOS interaction remains unverified.
