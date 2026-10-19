@@ -92,8 +92,8 @@ window.TOOLHUB_CATALOG={
     {
       "id": "community.design-studio",
       "name": "设计台",
-      "version": "0.1.0",
-      "description": "自由组合页面结构、导航、视觉与交互效果，实时试用布局，生成对应配置、HTML 示例和 Agent 设计说明，保存自己的设计预设。",
+      "version": "0.2.0",
+      "description": "12 个精选设计方向，组合 10 类布局、封面与字体语言、平台自适应和真实动效，生成可运行 HTML 与 Agent 提示词，保存本机预设。",
       "platforms": [
         "windows",
         "macos"
@@ -103,15 +103,18 @@ window.TOOLHUB_CATALOG={
       "category": "design",
       "tags": [
         "设计台",
+        "12 个方向",
         "布局",
+        "封面",
+        "字体",
         "Metro",
-        "无限画布",
-        "虚拟列表",
+        "画布",
+        "平台适配",
         "预设"
       ],
-      "path": "packages/design-studio/0.1.0/design-studio.toolhub-extension.json",
-      "sha256": "c2bc66a4cd5024aa20e4b8f6513a3c7b8c414f98f90d2e68e745f70cf17455e8",
-      "execution_support": "No native execution. Windows verified; macOS interaction unverified."
+      "path": "packages/design-studio/0.2.0/design-studio.toolhub-extension.json",
+      "sha256": "c8c6cc28f7e03ffddb1a6d4c1ad07cc35966876ebb717ef581b626c644cc1091",
+      "execution_support": "No native execution. Windows WebView2 verified; macOS interaction unverified."
     }
   ]
 };

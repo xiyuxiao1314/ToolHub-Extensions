@@ -2,4 +2,4 @@
 a18bea59ff26afde93017b54940c9d6c73e8224cd16398a883e9ac90139fd970  packages/graphite/1.0.0/graphite.toolhub-extension.json
 acaff4d2da3b21829c31564e5a2b5e03f8d1e934547eb73a15d53d9bc109a2b1  packages/workspace/1.0.0/workspace.toolhub-extension.json
 4db08f7d8804d646a3c4816822388045ce315183b65a8f4aac027eeee4acf215  packages/blender/1.0.0/blender.toolhub-extension.json
-c2bc66a4cd5024aa20e4b8f6513a3c7b8c414f98f90d2e68e745f70cf17455e8  packages/design-studio/0.1.0/design-studio.toolhub-extension.json
+c8c6cc28f7e03ffddb1a6d4c1ad07cc35966876ebb717ef581b626c644cc1091  packages/design-studio/0.2.0/design-studio.toolhub-extension.json

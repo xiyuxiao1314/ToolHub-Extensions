@@ -10,9 +10,9 @@ Download and extract this repository, then open [index.html](index.html) locally
 
 ## Design Studio (local development)
 
-[Design Studio 0.1](packages/design-studio/0.1.0/design-studio.toolhub-extension.json) composes six layouts, four navigation patterns, four visual styles and interaction effects; preview the result and export matching JSON, runnable HTML and Agent instructions. Eight builtin presets and up to 24 user presets are available. Windows native checks passed; macOS interaction remains unverified. This development addition has not been published with a new host installer.
+[Design Studio 0.2](packages/design-studio/0.2.0/design-studio.toolhub-extension.json) offers twelve visual directions inspired by Godly, Siteinspire, Awwwards, Codrops and Folia. Compose ten layouts, four navigation patterns, five visual languages and three content styles. Web, Android and desktop change both chrome and layout. Try the preview, then export matching JSON, runnable HTML and Agent instructions. Up to 24 user presets are available. Windows native checks passed; macOS interaction remains unverified. This development addition has not been published with a new host installer.
 
-Editable sources are in packages/design-studio/0.1.0/src. From that version directory, run `python build.py --source src --output design-studio.toolhub-extension.json`. Imported configurations are data only; the extension does not execute imported scripts or access native tools. See [the guide](docs/DESIGN-STUDIO.md).
+Editable sources are in packages/design-studio/0.2.0/src. From that version directory, run `python build.py --source src --output design-studio.toolhub-extension.json`. Imported configurations are data only; the extension does not execute imported scripts or access native tools. See [the guide](docs/DESIGN-STUDIO.md).
 
 ![Design Studio: composable effects and live preview, isolated Windows acceptance](docs/images/design-studio.png)
 
