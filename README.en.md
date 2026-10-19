@@ -6,7 +6,15 @@ Installable panels for local CLIs, independent pages, themes and reusable Agent 
 
 Download and extract this repository, then open [index.html](index.html) locally to filter by type, platform, name and tags. Download a manifest and select **Extensions → Import → Review → Install** in ToolHub. GitHub displays the HTML source; hosted Pages are not automatically enabled. See the Chinese README for the package table and support matrix.
 
-**Compatibility:** FFmpeg requires ToolHub 0.3.0-beta.4, other examples require beta.3. The public host download is still beta.2 and cannot install these v2 packages. Use the matching verified development build or wait for a host release. Windows controlled execution is supported; macOS FFmpeg execution is unavailable and must not be presented as verified.
+**Compatibility:** FFmpeg requires ToolHub beta.4; Design Studio requires beta.6 presentation storage, which beta.5 does not contain. Other examples require beta.3. Use a host matching each package's min_toolhub_version. Windows controlled execution is supported; macOS FFmpeg execution is unavailable and must not be presented as verified.
+
+## Design Studio (local development)
+
+[Design Studio 0.1](packages/design-studio/0.1.0/design-studio.toolhub-extension.json) composes six layouts, four navigation patterns, four visual styles and interaction effects; preview the result and export matching JSON, runnable HTML and Agent instructions. Eight builtin presets and up to 24 user presets are available. Windows native checks passed; macOS interaction remains unverified. This development addition has not been published with a new host installer.
+
+Editable sources are in packages/design-studio/0.1.0/src. From that version directory, run `python build.py --source src --output design-studio.toolhub-extension.json`. Imported configurations are data only; the extension does not execute imported scripts or access native tools. See [the guide](docs/DESIGN-STUDIO.md).
+
+![Design Studio: composable effects and live preview, isolated Windows acceptance](docs/images/design-studio.png)
 
 ## Screenshots
 

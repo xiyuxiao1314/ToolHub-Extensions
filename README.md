@@ -20,12 +20,21 @@ ToolHub 主项目：[xiyuxiao1314/ToolHub](https://github.com/xiyuxiao1314/ToolH
 
 | 扩展 | 用途 | 最低 ToolHub | 平台说明 |
 | --- | --- | --- | --- |
+| [设计台](packages/design-studio/0.1.0/design-studio.toolhub-extension.json) | 组合布局、导航、效果，生成匹配的 JSON/HTML/Agent 说明，保存设计预设 | 0.3.0-beta.6 | Windows 已验收；macOS 交互未验收 |
 | [FFmpeg 媒体工坊](packages/ffmpeg/1.0.0/ffmpeg.toolhub-extension.json) | 压缩视频、转成 MP4、提取 M4A 音频；附通用 Agent 流程 | 0.3.0-beta.4 | Windows 受控执行；macOS 仅预览/查询 |
 | [石墨主题](packages/graphite/1.0.0/graphite.toolhub-extension.json) | 配色、布局与紧凑密度 | 0.3.0-beta.3 | 随宿主支持；实体 Mac 未验收 |
 | [工具速览](packages/workspace/1.0.0/workspace.toolhub-extension.json) | 独立查询页面、受限 SDK 示例 | 0.3.0-beta.3 | 随宿主支持 |
 | [Blender 本机渲染](packages/blender/1.0.0/blender.toolhub-extension.json) | 本机识别规则与跨 Agent 渲染流程 | 0.3.0-beta.3 | 工具依赖需要自行准备 |
 
-**宿主版本提醒：** CLI 面板需要 beta.4。主项目公开下载目前仍为 beta.2，不能安装这些 v2 扩展；请使用已验证的本地开发版，等待对应宿主正式发布。目录收录不等于每个平台都经过交互验收。
+**宿主版本提醒：** CLI 面板需要 beta.4；设计台需要 beta.6 新增的包专属预设存储。beta.5 不包含该接口，请使用匹配的开发版并以每项 min_toolhub_version 为准。设计台当前为本地开发内容，尚未发布新宿主安装包；目录收录不等于每个平台都经过交互验收。
+
+## 设计台
+
+从 8 个内置预设开始，组合 6 种布局、4 种导航、4 种视觉风格及展开/悬停/错峰/拖拽/吸顶/焦点效果。实时试用预览，下方同步输出严格配置 JSON、可运行 HTML 与 Agent 设计说明。支持最多 24 个本机自定义预设、JSON 备份导入和性能组合约束；不安装第三方 UI 库，不执行导入代码。虚拟列表实际只挂载视口与缓冲区，画布支持相机与视口裁剪。参阅 [完整说明](docs/DESIGN-STUDIO.md)。
+
+可编辑源码在 packages/design-studio/0.1.0/src；在版本目录运行 `python build.py --source src --output design-studio.toolhub-extension.json` 可重建相同包。重新发布时提高版本并更新校验值。
+
+![设计台：效果库、实时组合预览与参数设置（独立 Windows 验收数据）](docs/images/design-studio.png)
 
 ## FFmpeg 媒体工坊
 

@@ -88,6 +88,30 @@ window.TOOLHUB_CATALOG={
       "sha256": "4db08f7d8804d646a3c4816822388045ce315183b65a8f4aac027eeee4acf215",
       "execution_support": "See host support matrix",
       "license": "MIT"
+    },
+    {
+      "id": "community.design-studio",
+      "name": "设计台",
+      "version": "0.1.0",
+      "description": "自由组合页面结构、导航、视觉与交互效果，实时试用布局，生成对应配置、HTML 示例和 Agent 设计说明，保存自己的设计预设。",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "min_toolhub_version": "0.3.0-beta.6",
+      "license": "MIT",
+      "category": "design",
+      "tags": [
+        "设计台",
+        "布局",
+        "Metro",
+        "无限画布",
+        "虚拟列表",
+        "预设"
+      ],
+      "path": "packages/design-studio/0.1.0/design-studio.toolhub-extension.json",
+      "sha256": "c2bc66a4cd5024aa20e4b8f6513a3c7b8c414f98f90d2e68e745f70cf17455e8",
+      "execution_support": "No native execution. Windows verified; macOS interaction unverified."
     }
   ]
 };
