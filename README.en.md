@@ -6,15 +6,18 @@ Installable panels for local CLIs, independent pages, themes and reusable Agent 
 
 Download and extract this repository, then open [index.html](index.html) locally to filter by type, platform, name and tags. Download a manifest and select **Extensions → Import → Review → Install** in ToolHub. GitHub displays the HTML source; hosted Pages are not automatically enabled. See the Chinese README for the package table and support matrix.
 
-**Compatibility:** FFmpeg requires ToolHub beta.4; Design Studio requires beta.6 presentation storage, which beta.5 does not contain. Other examples require beta.3. Use a host matching each package's min_toolhub_version. Windows controlled execution is supported; macOS FFmpeg execution is unavailable and must not be presented as verified.
+**Compatibility:** FFmpeg requires ToolHub beta.4; Design Studio 0.3.1 requires the local beta.7 full-window display API; the published 0.2 release needs beta.6 storage. Other examples require beta.3. Use a host matching each package's min_toolhub_version. Windows controlled execution is supported; macOS FFmpeg execution is unavailable and must not be presented as verified.
 
 Download the individual package or source/catalog ZIP from [Extensions Releases](https://github.com/xiyuxiao1314/ToolHub-Extensions/releases/tag/design-studio-v0.2.0). Host binaries are released separately in [ToolHub](https://github.com/xiyuxiao1314/ToolHub/releases).
 
-## Design Studio (0.3 local development) 0.2.0
+## Design Studio (0.3.1 local development)
 
-[Design Studio 0.3](packages/design-studio/0.3.0/design-studio.toolhub-extension.json) uses three steps (start, preview/tune, export), including a no-preset start and saved-draft resume. It offers twelve visual directions inspired by Godly, Siteinspire, Awwwards, Codrops and Folia. Compose ten layouts, four navigation patterns, five visual languages and three content styles. Web, Android and desktop change both chrome and layout. Try the preview, then export matching JSON, runnable HTML and Agent instructions. Up to 24 user presets are available. Windows native checks passed; macOS interaction remains unverified. The independent package is paired with [ToolHub beta.6](https://github.com/xiyuxiao1314/ToolHub/releases/tag/v0.3.0-beta.6).
+Use Preview Design to view the complete composition across the ToolHub window, then return to grouped controls. The overview has no scrolling frame. Version 0.3.1 requires the local beta.7 host display API; this build has not been published.
+ 0.2.0
 
-Editable sources are in packages/design-studio/0.3.0/src. From that version directory, run `python build.py --source src --output design-studio.toolhub-extension.json`. Imported configurations are data only; the extension does not execute imported scripts or access native tools. See [the guide](docs/DESIGN-STUDIO.md).
+[Design Studio 0.3.1](packages/design-studio/0.3.1/design-studio.toolhub-extension.json) uses three steps (start, preview/tune, export), including a no-preset start and saved-draft resume. It offers twelve visual directions inspired by Godly, Siteinspire, Awwwards, Codrops and Folia. Compose ten layouts, four navigation patterns, five visual languages and three content styles. Web, Android and desktop change both chrome and layout. Try the preview, then export matching JSON, runnable HTML and Agent instructions. Up to 24 user presets are available. Windows native checks passed; macOS interaction remains unverified. The published 0.2 package is paired with [ToolHub beta.6](https://github.com/xiyuxiao1314/ToolHub/releases/tag/v0.3.0-beta.6).
+
+Editable sources are in packages/design-studio/0.3.1/src. From that version directory, run `python build.py --source src --output design-studio.toolhub-extension.json`. Imported configurations are data only; the extension does not execute imported scripts or access native tools. See [the guide](docs/DESIGN-STUDIO.md).
 
 ![Design Studio: composable effects and live preview, isolated Windows acceptance](docs/images/design-studio.png)
 
@@ -41,3 +44,5 @@ Run `python scripts/validate.py` after changes. Update the manifest, catalog, ge
 [MIT](LICENSE). No third-party executable binaries are included; external tools retain their own licenses.
 
 [Verification / 验证记录](docs/VERIFICATION.md) · [CLI contribution contract](docs/CLI-CONTRIBUTIONS.md)
+
+![Design Studio complete preview](docs/images/design-studio-preview.png)

@@ -22,19 +22,19 @@ ToolHub 主项目：[xiyuxiao1314/ToolHub](https://github.com/xiyuxiao1314/ToolH
 
 | 扩展 | 用途 | 最低 ToolHub | 平台说明 |
 | --- | --- | --- | --- |
-| [设计台](packages/design-studio/0.3.0/design-studio.toolhub-extension.json) | 组合布局、导航、效果，生成匹配的 JSON/HTML/Agent 说明，保存设计预设 | 0.3.0-beta.6 | Windows 已验收；macOS 交互未验收 |
+| [设计台](packages/design-studio/0.3.1/design-studio.toolhub-extension.json) | 组合布局、导航、效果，生成匹配的 JSON/HTML/Agent 说明，保存设计预设 | 0.3.0-beta.7 | Windows 已验收；macOS 交互未验收 |
 | [FFmpeg 媒体工坊](packages/ffmpeg/1.0.0/ffmpeg.toolhub-extension.json) | 压缩视频、转成 MP4、提取 M4A 音频；附通用 Agent 流程 | 0.3.0-beta.4 | Windows 受控执行；macOS 仅预览/查询 |
 | [石墨主题](packages/graphite/1.0.0/graphite.toolhub-extension.json) | 配色、布局与紧凑密度 | 0.3.0-beta.3 | 随宿主支持；实体 Mac 未验收 |
 | [工具速览](packages/workspace/1.0.0/workspace.toolhub-extension.json) | 独立查询页面、受限 SDK 示例 | 0.3.0-beta.3 | 随宿主支持 |
 | [Blender 本机渲染](packages/blender/1.0.0/blender.toolhub-extension.json) | 本机识别规则与跨 Agent 渲染流程 | 0.3.0-beta.3 | 工具依赖需要自行准备 |
 
-**宿主版本提醒：** CLI 面板需要 beta.4；设计台需要 beta.6 新增的包专属预设存储。beta.5 不包含该接口，请使用匹配版本并以每项 min_toolhub_version 为准。设计台 0.2.0 与配套 [ToolHub beta.6](https://github.com/xiyuxiao1314/ToolHub/releases/tag/v0.3.0-beta.6) 分别发布；目录收录不等于每个平台都经过交互验收。
+**宿主版本提醒：** CLI 面板需要 beta.4；设计台 0.3.1 需要 beta.7 的完整窗口显示接口（本轮本地开发版）；已发布的 0.2 需要 beta.6 包专属预设存储。beta.5 不包含该接口，请使用匹配版本并以每项 min_toolhub_version 为准。设计台 0.2.0 与配套 [ToolHub beta.6](https://github.com/xiyuxiao1314/ToolHub/releases/tag/v0.3.0-beta.6) 分别发布；目录收录不等于每个平台都经过交互验收。
 
-## 设计台（0.3 本地开发版）
+## 设计台（0.3.1 本地开发版）
 
-按“选择预设 → 预览微调 → 导出”三步使用，可选无预设或继续草稿。从 12 个可视设计方向开始，组合 10 类布局、4 类导航、5 类视觉语言、封面/字体/摘要内容及展开/悬停/错峰/拖拽/吸顶/焦点效果。参考 Godly、Siteinspire、Awwwards、Codrops 与 Folia，提供多种明显不同的预览；Android / Web / 桌面的外壳和重排随平台切换。实时试用预览，下方同步输出严格配置 JSON、可运行 HTML 与 Agent 设计说明。支持最多 24 个本机自定义预设、JSON 备份导入和性能组合约束；不安装第三方 UI 库，不执行导入代码。虚拟列表实际只挂载视口与缓冲区，画布支持相机与视口裁剪。参阅 [完整说明](docs/DESIGN-STUDIO.md)。
+按“选择预设 → 预览微调 → 导出”三步使用，可选无预设或继续草稿。从 12 个可视设计方向开始，组合 10 类布局、4 类导航、5 类视觉语言、封面/字体/摘要内容及展开/悬停/错峰/拖拽/吸顶/焦点效果。参考 Godly、Siteinspire、Awwwards、Codrops 与 Folia，提供多种明显不同的预览；Android / Web / 桌面的外壳和重排随平台切换。点击“预览设计”打开覆盖整个 ToolHub 的完整画面，外框不再滚动，返回后继续分组微调；同步输出严格配置 JSON、可运行 HTML 与 Agent 设计说明。支持最多 24 个本机自定义预设、JSON 备份导入和性能组合约束；不安装第三方 UI 库，不执行导入代码。虚拟列表实际只挂载视口与缓冲区，画布支持相机与视口裁剪。参阅 [完整说明](docs/DESIGN-STUDIO.md)。
 
-可编辑源码在 packages/design-studio/0.3.0/src；在版本目录运行 `python build.py --source src --output design-studio.toolhub-extension.json` 可重建相同包。重新发布时提高版本并更新校验值。
+可编辑源码在 packages/design-studio/0.3.1/src；在版本目录运行 `python build.py --source src --output design-studio.toolhub-extension.json` 可重建相同包。重新发布时提高版本并更新校验值。
 
 ![设计台：效果库、实时组合预览与参数设置（独立 Windows 验收数据）](docs/images/design-studio.png)
 
@@ -59,3 +59,5 @@ Agent 可按需 search_skills / inspect_skill 获取随扩展发布的流程，�
 采用 [MIT](LICENSE)；不包含 FFmpeg、Blender 或其他工具二进制，它们有各自许可证。
 
 [Verification / 验证记录](docs/VERIFICATION.md) · [CLI contribution contract](docs/CLI-CONTRIBUTIONS.md)
+
+![Design Studio complete preview](docs/images/design-studio-preview.png)
