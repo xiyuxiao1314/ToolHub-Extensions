@@ -10,11 +10,11 @@ Download and extract this repository, then open [index.html](index.html) locally
 
 Download the individual package or source/catalog ZIP from [Extensions Releases](https://github.com/xiyuxiao1314/ToolHub-Extensions/releases/tag/design-studio-v0.2.0). Host binaries are released separately in [ToolHub](https://github.com/xiyuxiao1314/ToolHub/releases).
 
-## Design Studio 0.2.0
+## Design Studio (0.3 local development) 0.2.0
 
-[Design Studio 0.2](packages/design-studio/0.2.0/design-studio.toolhub-extension.json) offers twelve visual directions inspired by Godly, Siteinspire, Awwwards, Codrops and Folia. Compose ten layouts, four navigation patterns, five visual languages and three content styles. Web, Android and desktop change both chrome and layout. Try the preview, then export matching JSON, runnable HTML and Agent instructions. Up to 24 user presets are available. Windows native checks passed; macOS interaction remains unverified. The independent package is paired with [ToolHub beta.6](https://github.com/xiyuxiao1314/ToolHub/releases/tag/v0.3.0-beta.6).
+[Design Studio 0.3](packages/design-studio/0.3.0/design-studio.toolhub-extension.json) uses three steps (start, preview/tune, export), including a no-preset start and saved-draft resume. It offers twelve visual directions inspired by Godly, Siteinspire, Awwwards, Codrops and Folia. Compose ten layouts, four navigation patterns, five visual languages and three content styles. Web, Android and desktop change both chrome and layout. Try the preview, then export matching JSON, runnable HTML and Agent instructions. Up to 24 user presets are available. Windows native checks passed; macOS interaction remains unverified. The independent package is paired with [ToolHub beta.6](https://github.com/xiyuxiao1314/ToolHub/releases/tag/v0.3.0-beta.6).
 
-Editable sources are in packages/design-studio/0.2.0/src. From that version directory, run `python build.py --source src --output design-studio.toolhub-extension.json`. Imported configurations are data only; the extension does not execute imported scripts or access native tools. See [the guide](docs/DESIGN-STUDIO.md).
+Editable sources are in packages/design-studio/0.3.0/src. From that version directory, run `python build.py --source src --output design-studio.toolhub-extension.json`. Imported configurations are data only; the extension does not execute imported scripts or access native tools. See [the guide](docs/DESIGN-STUDIO.md).
 
 ![Design Studio: composable effects and live preview, isolated Windows acceptance](docs/images/design-studio.png)
 
