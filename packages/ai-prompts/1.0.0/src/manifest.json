@@ -1,0 +1,22 @@
+{
+  "schema": "toolhub.extension/v2",
+  "id": "community.ai-prompts",
+  "name": "AI 提示词",
+  "description": "按分类和关键词寻找提示词，查看全文并一键复制。完全离线，无需账号。",
+  "version": "1.0.0",
+  "author": "ToolHub",
+  "license": "MIT",
+  "platforms": ["windows", "macos"],
+  "min_toolhub_version": "0.3.0-beta.3",
+  "permissions": [],
+  "skills": [],
+  "views": [{
+    "id": "community.ai-prompts.library",
+    "label": "AI 提示词",
+    "icon": "❞",
+    "order": 96,
+    "html": "",
+    "css": "",
+    "script": ""
+  }]
+}

@@ -1,0 +1,12 @@
+<main id="library" aria-label="AI 提示词库">
+  <header class="library-heading"><div class="library-name"><span class="quote-icon" aria-hidden="true">❞</span><div><span class="eyebrow">PROMPT LIBRARY</span><h1>找到合适的表达。</h1></div></div><span id="library-total" class="total"></span></header>
+  <section class="filters" aria-label="筛选提示词">
+    <div class="search-row"><label class="search"><span aria-hidden="true">⌕</span><input id="query" type="search" aria-label="搜索提示词" placeholder="搜索用途、关键词，例如：网页、代码审查、周报…" autocomplete="off"><kbd aria-hidden="true">⌘ / Ctrl K</kbd></label><div class="sort" role="group" aria-label="提示词排序"><button type="button" data-sort="recommended" aria-pressed="true">推荐</button><button type="button" data-sort="name" aria-pressed="false">名称</button></div></div>
+    <div id="categories" class="categories" role="group" aria-label="提示词分类"></div>
+  </section>
+  <div class="results-heading"><span id="results-label" role="status"></span><button type="button" class="text-button" id="reset" hidden>清除筛选 ↗</button></div>
+  <section id="grid-space" class="grid-space" aria-label="提示词列表"><div id="grid" class="prompt-grid"></div><div id="empty" class="empty" hidden><span aria-hidden="true">⌕</span><h2>没有找到匹配的提示词</h2><p>试试更短的关键词，或换一个分类。</p><button type="button" class="primary" id="empty-reset">清除筛选</button></div></section>
+  <footer class="pagination" aria-label="提示词分页"><span id="range"></span><div class="page-controls"><button type="button" id="previous" aria-label="上一页提示词">←</button><output id="page-label" aria-live="polite"></output><button type="button" id="next" aria-label="下一页提示词">→</button></div><span class="offline"><i aria-hidden="true"></i>离线可用</span></footer>
+</main>
+<div id="detail-overlay" class="detail-overlay" hidden><section class="detail" role="dialog" aria-modal="true" aria-labelledby="detail-title"><header class="detail-header"><div><span id="detail-category" class="eyebrow"></span><h2 id="detail-title"></h2><p id="detail-description"></p></div><button type="button" id="close-detail" class="close" aria-label="关闭提示词详情">×</button></header><div class="detail-meta"><div id="detail-tags" class="tags"></div><span id="detail-length"></span></div><label class="visually-hidden" for="prompt-text">完整提示词</label><textarea id="prompt-text" readonly spellcheck="false"></textarea><footer class="detail-footer"><span id="copy-hint">按需替换方括号里的内容。</span><button type="button" id="copy-detail" class="primary">复制提示词 ↗</button></footer></section></div>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>

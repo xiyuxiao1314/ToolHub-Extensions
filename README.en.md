@@ -10,6 +10,12 @@ Download and extract this repository, then open [index.html](index.html) locally
 
 Download the individual package or source/catalog ZIP from [Extensions Releases](https://github.com/xiyuxiao1314/ToolHub-Extensions/releases/tag/design-studio-v0.2.0). Host binaries are released separately in [ToolHub](https://github.com/xiyuxiao1314/ToolHub/releases).
 
+## AI Prompts (1.0.0 local preview)
+
+[AI Prompts](packages/ai-prompts/1.0.0/ai-prompts.toolhub-extension.json) offers 48 original offline templates: category buttons, keyword search, responsive pagination, full text and copy. No accounts, favorites, publishing, network access or new host permissions. ToolHub beta.3 or newer; Windows browser interaction and native installation checked, macOS unverified. See [the guide](docs/AI-PROMPTS.en.md).
+
+![AI Prompts](docs/images/ai-prompts.png)
+
 ## Design Studio (0.3.1 local development)
 
 Use Preview Design to view the complete composition across the ToolHub window, then return to grouped controls. The overview has no scrolling frame. Version 0.3.1 requires the local beta.7 host display API; this build has not been published.

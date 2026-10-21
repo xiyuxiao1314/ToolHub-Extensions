@@ -114,6 +114,29 @@
       "path": "packages/design-studio/0.3.1/design-studio.toolhub-extension.json",
       "sha256": "3c10f49bb733c775c2534c9ffc8bd9c0cf4865844a41646520ee144131440961",
       "execution_support": "No native execution. Windows complete-preview interaction verified; macOS interaction unverified."
+    },
+    {
+      "id": "community.ai-prompts",
+      "name": "AI 提示词",
+      "version": "1.0.0",
+      "description": "按分类和关键词寻找提示词，查看全文并一键复制。完全离线，无需账号。",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "min_toolhub_version": "0.3.0-beta.3",
+      "license": "MIT",
+      "category": "page",
+      "tags": [
+        "AI",
+        "提示词",
+        "离线",
+        "搜索",
+        "复制"
+      ],
+      "path": "packages/ai-prompts/1.0.0/ai-prompts.toolhub-extension.json",
+      "sha256": "43690c2fbc93554757438b5ae99bea6ed0ccfa6147ae7cc99522701f4c9de206",
+      "execution_support": "Offline only. Windows browser sandbox interaction and native host installation verified; macOS unverified."
     }
   ]
 }

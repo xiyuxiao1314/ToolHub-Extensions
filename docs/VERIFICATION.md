@@ -13,3 +13,7 @@ Limits: the native file-dialog implementation compiled, but OS dialog interactio
 ## Design Studio 0.2.0 — 2026-10-19
 
 Twelve visual presets/model bounds/unsafe inputs, structure/navigation/style/content/platform combinations, strict v1 migration and HTML escaping passed. Native Windows WebView2 ran eleven workflow groups plus responsive mobile controls, camera/keyboard pan, deep-page expansion/focus return, dynamic reduced-motion and virtual row bounds without runtime/CSP errors. Formal 0.1→0.2 install preserved drafts/presets across reload; exported standalone HTML ran its interactions. The unchanged default builder reproduces the exact 116681-byte manifest (SHA-256 c8c6cc28f7e03ffddb1a6d4c1ad07cc35966876ebb717ef581b626c644cc1091). All five catalog entries, paths and raw SHA-256 hashes pass validation. These are maintainer checks, not independent certification; macOS interaction remains unverified.
+
+## AI Prompts 1.0.0 — 2026-10-21
+
+48 original prompts / 6 categories, native package preview and installation, existing extension-state and library preservation passed. Edge CUA checks covered search/filter/empty reset/name sorting/pagination, card and full-text copy, keyboard focus and three window sizes. The real host-served document also rendered and copied. No host rebuild, new permissions, model calls or Skills. Browser connection messages without an application stack were observed; no blanket zero-console-error claim. macOS remains unverified. See [AI Prompts](AI-PROMPTS.md).
