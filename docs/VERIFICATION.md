@@ -17,3 +17,7 @@ Twelve visual presets/model bounds/unsafe inputs, structure/navigation/style/con
 ## AI Prompts 1.0.0 — 2026-10-21
 
 48 original prompts / 6 categories, native package preview and installation, existing extension-state and library preservation passed. Edge CUA checks covered search/filter/empty reset/name sorting/pagination, card and full-text copy, keyboard focus and three window sizes. The real host-served document also rendered and copied. No host rebuild, new permissions, model calls or Skills. Browser connection messages without an application stack were observed; no blanket zero-console-error claim. macOS remains unverified. See [AI Prompts](AI-PROMPTS.md).
+
+## AI Prompts 1.1.0 — 2026-10-21
+
+Data round trips, quota/invalid input and conflict tests passed. Actual isolated Windows WebView CRUD/undo/reload persistence/Markdown file import passed. Native Save-picker E2E remains pending after targeting trouble and user Escape interruption. Host storage and real UTF-8 filesystem-write tests passed. Production installation unchanged; macOS unverified. Requires matching beta.8 host. See AI-PROMPTS.md.

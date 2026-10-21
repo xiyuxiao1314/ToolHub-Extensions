@@ -118,25 +118,25 @@
     {
       "id": "community.ai-prompts",
       "name": "AI 提示词",
-      "version": "1.0.0",
-      "description": "按分类和关键词寻找提示词，查看全文并一键复制。完全离线，无需账号。",
+      "version": "1.1.0",
+      "description": "离线提示词库：分类搜索、新增编辑、删除撤销、Markdown 导入及单条或整库导出。无需账号。",
       "platforms": [
         "windows",
         "macos"
       ],
-      "min_toolhub_version": "0.3.0-beta.3",
+      "min_toolhub_version": "0.3.0-beta.8",
       "license": "MIT",
       "category": "page",
       "tags": [
         "AI",
         "提示词",
         "离线",
-        "搜索",
-        "复制"
+        "Markdown",
+        "导入导出"
       ],
-      "path": "packages/ai-prompts/1.0.0/ai-prompts.toolhub-extension.json",
-      "sha256": "43690c2fbc93554757438b5ae99bea6ed0ccfa6147ae7cc99522701f4c9de206",
-      "execution_support": "Offline only. Windows browser sandbox interaction and native host installation verified; macOS unverified."
+      "path": "packages/ai-prompts/1.1.0/ai-prompts.toolhub-extension.json",
+      "sha256": "b93af74e08855809786e0cdc2575c3a3a1437b0f95e2abd2401b297779d035e2",
+      "execution_support": "No execution or network. Windows WebView CRUD/import/reload checked; native Save picker needs manual verification; macOS unverified."
     }
   ]
 }
