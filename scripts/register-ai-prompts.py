@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib,argparse
 parser=argparse.ArgumentParser();parser.add_argument('--windows-verified',action='store_true');options=parser.parse_args()
 root=Path(__file__).resolve().parents[1]
-path='packages/ai-prompts/1.1.2/ai-prompts.toolhub-extension.json'
+path='packages/ai-prompts/1.2.0/ai-prompts.toolhub-extension.json'
 raw=(root/path).read_bytes();package=json.loads(raw)
 catalog=json.loads((root/'catalog.json').read_text(encoding='utf-8'))
 row={key:package[key] for key in ['id','name','version','description','platforms','min_toolhub_version','license']}

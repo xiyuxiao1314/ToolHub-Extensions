@@ -25,14 +25,14 @@ try {
  await card(edited).getByRole('button',{name:'删除「'+edited+'」提示词',exact:true}).click();assert.equal(await frame.locator('#detail-overlay').isVisible(),false);assert.deepEqual(await state(),beforeDelete,'Opening confirmation must not delete');await frame.locator('#cancel-delete').click();assert.deepEqual(await state(),beforeDelete);
  await card(edited).getByRole('button',{name:'删除「'+edited+'」提示词',exact:true}).click();await frame.locator('#confirm-delete').click();await frame.locator('#undo').waitFor();assert.equal((await state()).prompts.length,baseline);
  await frame.locator('#undo').click();await card(edited).waitFor();assert.deepEqual(await state(),beforeDelete,'Undo restores the same position/content');
- // Detail action must still delete the current record after canceling a card deletion.
- await card(edited).getByRole('button',{name:'查看「'+edited+'」全文',exact:true}).click();await frame.locator('#delete').click();await frame.locator('#confirm-delete').click();await frame.locator('#undo').waitFor();assert.equal((await state()).prompts.length,baseline);await frame.locator('#dismiss-undo').click();
- await page.reload();await open();assert(!(await state()).prompts.some(p=>p.title===edited));
  for(const [width,height] of [[1440,900],[1100,760],[900,640]]){
   await page.setViewportSize({width,height});
   await frame.locator('.prompt-card').first().getByRole('button',{name:/删除/}).click({trial:true});
   const geometry=await frame.locator('body').evaluate(()=>({scroll:document.documentElement.scrollHeight>innerHeight+1,clipped:[...document.querySelectorAll('.prompt-card')].some(card=>{const box=card.getBoundingClientRect();return [...card.querySelectorAll('.card-footer button')].some(button=>{const r=button.getBoundingClientRect();return r.left<box.left||r.right>box.right||r.top<box.top||r.bottom>box.bottom})})}));
   assert.equal(geometry.scroll,false,'Library stays paginated');assert.equal(geometry.clipped,false,'Card management actions stay in view');
  }
+ // Detail action must still delete the current record after canceling a card deletion.
+ await card(edited).getByRole('button',{name:'查看「'+edited+'」全文',exact:true}).click();await frame.locator('#delete').click();await frame.locator('#confirm-delete').click();await frame.locator('#undo').waitFor();assert.equal((await state()).prompts.length,baseline);await frame.locator('#dismiss-undo').click();
+ await page.reload();await open();assert(!(await state()).prompts.some(p=>p.title===edited));
  console.log('PASS native card create/edit, save/reload, delete confirmation/cancel, undo, detail delete and persistent removal');
 }finally{await browser.close()}

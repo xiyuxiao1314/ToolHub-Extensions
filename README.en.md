@@ -10,11 +10,11 @@ Download and extract this repository, then open [index.html](index.html) locally
 
 Download the individual package or source/catalog ZIP from [Extensions Releases](https://github.com/xiyuxiao1314/ToolHub-Extensions/releases/tag/design-studio-v0.2.0). Host binaries are released separately in [ToolHub](https://github.com/xiyuxiao1314/ToolHub/releases).
 
-## AI Prompts (1.1.2 local development)
+## AI Prompts (1.2.0)
 
-[AI Prompts](packages/ai-prompts/1.1.2/ai-prompts.toolhub-extension.json) includes 48 original offline templates, search, paging, create/edit/delete/undo, Markdown import and single Markdown / whole-library JSON export. Requires ToolHub beta.8. Windows CRUD/import/reload checked; native Save picker pending after user interruption. The local production installation is updated; macOS is unverified. See [the guide](docs/AI-PROMPTS.en.md).
+[AI Prompts](packages/ai-prompts/1.2.0/ai-prompts.toolhub-extension.json) starts empty without bundled prompts, and supports search, paging, create/edit/delete/undo, Markdown import and single Markdown / whole-library JSON export. Requires ToolHub beta.8. Windows CRUD/import/reload checked; native Save picker verification pending. The local production installation is updated; macOS is unverified. See [the guide](docs/AI-PROMPTS.en.md).
 
-![AI Prompts](docs/images/ai-prompts.png)
+![AI Prompts](docs/images/ai-prompts-empty.png)
 
 ## Design Studio (0.3.1 local development)
 
