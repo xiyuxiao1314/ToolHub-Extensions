@@ -118,7 +118,7 @@ window.TOOLHUB_CATALOG={
     {
       "id": "community.ai-prompts",
       "name": "AI 提示词",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "description": "离线提示词库：分类搜索、新增编辑、删除撤销、Markdown 导入及单条或整库导出。无需账号。",
       "platforms": [
         "windows",
@@ -134,8 +134,8 @@ window.TOOLHUB_CATALOG={
         "Markdown",
         "导入导出"
       ],
-      "path": "packages/ai-prompts/1.1.1/ai-prompts.toolhub-extension.json",
-      "sha256": "645b1ba37735a7bc549f1f08c07a64570c07d9723080d84dc1041eb88d6d554a",
+      "path": "packages/ai-prompts/1.1.2/ai-prompts.toolhub-extension.json",
+      "sha256": "982a0e9c00d8402db0eb17b3b1f408f85e12f77c4935cc733b14cf073577b90d",
       "execution_support": "No execution or network. Windows WebView CRUD/import/reload checked; native Save picker needs manual verification; macOS unverified."
     }
   ]

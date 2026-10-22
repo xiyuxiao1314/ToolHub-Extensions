@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import vm from 'node:vm'
 import assert from 'node:assert/strict'
-const source=new URL('../packages/ai-prompts/1.1.1/src/',import.meta.url)
+const source=new URL('../packages/ai-prompts/1.1.2/src/',import.meta.url)
 vm.runInThisContext(fs.readFileSync(new URL('model.js',source),'utf8'))
 const M=globalThis.PromptLibraryModel,seed=JSON.parse(fs.readFileSync(new URL('prompts.json',source),'utf8'))
 const base=seed.prompts.map(p=>({...p,category:seed.categories.find(c=>c.id===p.category).label}))

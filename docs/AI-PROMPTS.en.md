@@ -1,4 +1,4 @@
-# AI Prompts 1.1.1
+# AI Prompts 1.1.2
 
 Offline extension `community.ai-prompts`, requiring **ToolHub 0.3.0-beta.8**. Keep 1.0.0 for older hosts. Open Extension Center → Applications → AI Prompts.
 
@@ -10,10 +10,12 @@ Successful edits persist in package-scoped host storage with optimistic revision
 
 Limits: 500 records, 1 MiB UTF-8 JSON state, 20,000 characters per body, 50 files / 2 MiB per import, 2 MiB per export. Markdown/HTML is never executed. No accounts, favorites, publishing, network, model calls, tool execution or Skill registration. Native Save chooses the destination; the extension cannot pass a disk path. Canceling export leaves the library unchanged.
 
-Build with `python packages/ai-prompts/1.1.1/build.py`, test with `node scripts/test-ai-prompts.mjs`, update the index with `python scripts/register-ai-prompts.py`, then `python scripts/validate.py`. Versioned editable sources are included. Templates are original and MIT licensed; the UI concept references AI Short without copying its catalog or service.
+Build with `python packages/ai-prompts/1.1.2/build.py`, test with `node scripts/test-ai-prompts.mjs`, update the index with `python scripts/register-ai-prompts.py`, then `python scripts/validate.py`. Versioned editable sources are included. Templates are original and MIT licensed; the UI concept references AI Short without copying its catalog or service.
 
 Checks passed for 48 Markdown round trips, complete JSON round trip, Unicode/BOM/CRLF, conflict policies, empty-library persistence and invalid/quota inputs. Actual isolated Windows WebView checks covered CRUD, undo, reload persistence and Markdown import. A sandbox form-submission bug was fixed by using explicit save handlers. Host tests cover package storage isolation/revisions/quota and actual UTF-8 file writing/rejection of invalid names and non-files.
 
-Native Save-picker end-to-end verification is **pending**. Local production is now beta.8 / AI Prompts 1.1.1; no GitHub publication. macOS interaction is unverified. Use this development package with the matching beta.8 host for acceptance.
+Native Save-picker end-to-end verification is **pending**. Local production is now beta.8 / AI Prompts 1.1.2; no GitHub publication. macOS interaction is unverified. Use this development package with the matching beta.8 host for acceptance.
 
-Version 1.1.1 makes card edit/delete actions directly accessible and highlights Add. Native regression checks cover direct actions, delete confirmation/cancel, undo, save/reload and three window sizes. See [verification](AI-PROMPTS-CARDS-VERIFICATION.md).
+Version 1.1.2 makes card edit/delete actions directly accessible and highlights Add. Native regression checks cover direct actions, delete confirmation/cancel, undo, save/reload and three window sizes. See [verification](AI-PROMPTS-CARDS-VERIFICATION.md).
+
+1.1.2 removes the decorative heading and quote mark; the page starts with search and categories.

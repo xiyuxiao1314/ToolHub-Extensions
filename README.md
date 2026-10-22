@@ -22,7 +22,7 @@ ToolHub 主项目：[xiyuxiao1314/ToolHub](https://github.com/xiyuxiao1314/ToolH
 
 | 扩展 | 用途 | 最低 ToolHub | 平台说明 |
 | --- | --- | --- | --- |
-| [AI 提示词](packages/ai-prompts/1.1.1/ai-prompts.toolhub-extension.json) | 离线搜索、增删改、Markdown 导入、单条及整库预设导出 | 0.3.0-beta.8 | Windows 保存/导入/重载已验；原生保存对话框待人工验收；macOS 未验 |
+| [AI 提示词](packages/ai-prompts/1.1.2/ai-prompts.toolhub-extension.json) | 离线搜索、增删改、Markdown 导入、单条及整库预设导出 | 0.3.0-beta.8 | Windows 保存/导入/重载已验；原生保存对话框待人工验收；macOS 未验 |
 | [设计台](packages/design-studio/0.3.1/design-studio.toolhub-extension.json) | 组合布局、导航、效果，生成匹配的 JSON/HTML/Agent 说明，保存设计预设 | 0.3.0-beta.7 | Windows 已验收；macOS 交互未验收 |
 | [FFmpeg 媒体工坊](packages/ffmpeg/1.0.0/ffmpeg.toolhub-extension.json) | 压缩视频、转成 MP4、提取 M4A 音频；附通用 Agent 流程 | 0.3.0-beta.4 | Windows 受控执行；macOS 仅预览/查询 |
 | [石墨主题](packages/graphite/1.0.0/graphite.toolhub-extension.json) | 配色、布局与紧凑密度 | 0.3.0-beta.3 | 随宿主支持；实体 Mac 未验收 |
@@ -31,7 +31,7 @@ ToolHub 主项目：[xiyuxiao1314/ToolHub](https://github.com/xiyuxiao1314/ToolH
 
 **宿主版本提醒：** CLI 面板需要 beta.4；设计台 0.3.1 需要 beta.7 的完整窗口显示接口（本轮本地开发版）；已发布的 0.2 需要 beta.6 包专属预设存储。beta.5 不包含该接口，请使用匹配版本并以每项 min_toolhub_version 为准。设计台 0.2.0 与配套 [ToolHub beta.6](https://github.com/xiyuxiao1314/ToolHub/releases/tag/v0.3.0-beta.6) 分别发布；目录收录不等于每个平台都经过交互验收。
 
-## AI 提示词（1.1.1 本地开发版）
+## AI 提示词（1.1.2 本地开发版）
 
 48 条原创模板，支持搜索、分页、全文复制，也可以直接新增、编辑、删除并撤销。导入 UTF-8 Markdown 文本；单条导出为 .md，全部导出为可分享的 JSON 预设包，导入前预览并选择重复条目的处理方式。需要配套 beta.8 宿主；当前为本地开发版，原生保存对话框待人工验收，已更新本机正式运行版。详见 [使用与验证说明](docs/AI-PROMPTS.md)。
 

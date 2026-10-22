@@ -1,6 +1,6 @@
-# AI 提示词 1.1.1
+# AI 提示词 1.1.2
 
-独立离线扩展 `community.ai-prompts`，需要 ToolHub **0.3.0-beta.8** 或更新版本。该宿主版本补充了本机预设容量和受限文档导出接口。1.0.0 包仍保留，不能在旧宿主上直接安装 1.1.1。
+独立离线扩展 `community.ai-prompts`，需要 ToolHub **0.3.0-beta.8** 或更新版本。该宿主版本补充了本机预设容量和受限文档导出接口。1.0.0 包仍保留，不能在旧宿主上直接安装 1.1.2。
 
 ## 使用
 
@@ -24,10 +24,10 @@
 
 ## 开发与验证
 
-源文件位于 packages/ai-prompts/1.1.1/src，保留原版 48 条模板。示例内容为本项目原创，MIT；仅功能理念参考 AI Short，未复制其数据或服务。
+源文件位于 packages/ai-prompts/1.1.2/src，保留原版 48 条模板。示例内容为本项目原创，MIT；仅功能理念参考 AI Short，未复制其数据或服务。
 
 ```powershell
-python packages/ai-prompts/1.1.1/build.py
+python packages/ai-prompts/1.1.2/build.py
 node scripts/test-ai-prompts.mjs
 python scripts/register-ai-prompts.py
 python scripts/validate.py
@@ -36,6 +36,8 @@ node scripts/preview-ai-prompts.mjs
 
 数据测试覆盖 48 条 Markdown 往返、整库 JSON、BOM/CRLF/Unicode、重复与冲突策略、空库保存及非法/超限输入。Windows ToolHub 独立 WebView 已实测新增、编辑、删除撤销、重载持久化、Markdown 文件导入；修复了 sandbox 禁止 form 提交导致保存无效的问题。宿主存储隔离/修订/容量与真实 UTF-8 文件写入、文件名/目录拒绝测试通过。
 
-**尚未完成**：原生保存对话框端到端验收。已安装本机 beta.8 / 提示词 1.1.1，未发布 GitHub。macOS 实机未验证。当前包供配套 beta.8 开发宿主验收。
+**尚未完成**：原生保存对话框端到端验收。已安装本机 beta.8 / 提示词 1.1.2，未发布 GitHub。macOS 实机未验证。当前包供配套 beta.8 开发宿主验收。
 
-1.1.1 将编辑、删除按钮直接放在卡片上，并突出新增。已验证卡片直接操作、删除确认/取消、撤销、保存重载和三种窗口尺寸。见 [验证记录](AI-PROMPTS-CARDS-VERIFICATION.md)。
+1.1.2 将编辑、删除按钮直接放在卡片上，并突出新增。已验证卡片直接操作、删除确认/取消、撤销、保存重载和三种窗口尺寸。见 [验证记录](AI-PROMPTS-CARDS-VERIFICATION.md)。
+
+1.1.2 移除顶部英文眉题、宣传标题和引号装饰，直接从搜索和分类开始。

@@ -16,7 +16,7 @@ try {
  async function open(){await page.getByRole('navigation',{name:'一级导航',exact:true}).getByRole('button',{name:'扩展中心',exact:true}).click();await page.getByLabel('筛选二级导航',{exact:true}).fill('');await page.getByRole('navigation',{name:'二级导航',exact:true}).getByRole('button',{name:'AI 提示词',exact:true}).click();await frame.locator('#add').click({trial:true})}
  const card=title=>frame.locator('.prompt-card').filter({has:frame.getByRole('heading',{name:title,exact:true})});
  const fixture='卡片直达管理验收 '+Date.now(),edited=fixture+' 已编辑';
- await page.reload();await open();const baseline=Number((await frame.locator('#library-total').textContent()).split(' ')[0]);
+ await page.reload();await open();const baseline=Number(await frame.locator('[data-category="all"] small').textContent());
  await frame.locator('#add').click();await frame.getByLabel('标题',{exact:true}).fill(fixture);await frame.locator('#edit-content').fill('# 临时验收\n保持用户库外的测试数据。');await frame.locator('#save').click();await card(fixture).waitFor();assert.equal((await state()).prompts.length,baseline+1);
  // Edit directly from the card, without opening details.
  await card(fixture).getByRole('button',{name:'编辑「'+fixture+'」提示词',exact:true}).click();assert.equal(await frame.locator('#detail-overlay').isVisible(),false);await frame.getByLabel('标题',{exact:true}).fill(edited);await frame.locator('#save').click();await card(edited).waitFor();
