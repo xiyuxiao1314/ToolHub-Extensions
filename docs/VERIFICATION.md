@@ -21,3 +21,7 @@ Twelve visual presets/model bounds/unsafe inputs, structure/navigation/style/con
 ## AI Prompts 1.1.0 — 2026-10-21
 
 Data round trips, quota/invalid input and conflict tests passed. Actual isolated Windows WebView CRUD/undo/reload persistence/Markdown file import passed. Native Save-picker E2E remains pending after targeting trouble and user Escape interruption. Host storage and real UTF-8 filesystem-write tests passed. Production installation unchanged; macOS unverified. Requires matching beta.8 host. See AI-PROMPTS.md.
+
+## AI Prompts production integration — 2026-10-22
+
+Local ToolHub beta.8 and AI Prompts 1.1.0 installed. Named line icons and legacy media/design aliases render at identical 20×20 CSS pixels with aligned labels, checked in actual Windows QA and production. CRUD/reload/Markdown import and model round trips pass. Native Save-picker E2E still unverified (modal not exposed by Computer Use); no successful picker export claim. Other extensions and user inventory preserved. No GitHub publication.

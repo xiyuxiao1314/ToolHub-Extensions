@@ -13,7 +13,7 @@
   "views": [{
     "id": "community.ai-prompts.library",
     "label": "AI 提示词",
-    "icon": "❞",
+    "icon": "prompt",
     "order": 96,
     "html": "",
     "css": "",

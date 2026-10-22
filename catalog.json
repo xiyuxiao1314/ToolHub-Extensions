@@ -135,7 +135,7 @@
         "导入导出"
       ],
       "path": "packages/ai-prompts/1.1.0/ai-prompts.toolhub-extension.json",
-      "sha256": "b93af74e08855809786e0cdc2575c3a3a1437b0f95e2abd2401b297779d035e2",
+      "sha256": "e89b811ec42b8338ffe807f9629b4fc6bd366457f39b8a9d344226040dbbf101",
       "execution_support": "No execution or network. Windows WebView CRUD/import/reload checked; native Save picker needs manual verification; macOS unverified."
     }
   ]

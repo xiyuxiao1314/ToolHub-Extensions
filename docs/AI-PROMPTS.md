@@ -36,4 +36,4 @@ node scripts/preview-ai-prompts.mjs
 
 数据测试覆盖 48 条 Markdown 往返、整库 JSON、BOM/CRLF/Unicode、重复与冲突策略、空库保存及非法/超限输入。Windows ToolHub 独立 WebView 已实测新增、编辑、删除撤销、重载持久化、Markdown 文件导入；修复了 sandbox 禁止 form 提交导致保存无效的问题。宿主存储隔离/修订/容量与真实 UTF-8 文件写入、文件名/目录拒绝测试通过。
 
-**尚未完成**：原生保存对话框端到端验收。测试遇到窗口定位不稳定，随后用户按 Esc 停止界面验证；未替换正式运行版、未发布 GitHub。macOS 实机未验证。当前包供配套 beta.8 开发宿主验收。
+**尚未完成**：原生保存对话框端到端验收。测试遇到窗口定位不稳定，随后用户按 Esc 停止界面验证；已安装本机 beta.8 / 提示词 1.1.0，未发布 GitHub。macOS 实机未验证。当前包供配套 beta.8 开发宿主验收。

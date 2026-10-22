@@ -14,4 +14,4 @@ Build with `python packages/ai-prompts/1.1.0/build.py`, test with `node scripts/
 
 Checks passed for 48 Markdown round trips, complete JSON round trip, Unicode/BOM/CRLF, conflict policies, empty-library persistence and invalid/quota inputs. Actual isolated Windows WebView checks covered CRUD, undo, reload persistence and Markdown import. A sandbox form-submission bug was fixed by using explicit save handlers. Host tests cover package storage isolation/revisions/quota and actual UTF-8 file writing/rejection of invalid names and non-files.
 
-Native Save-picker end-to-end verification is **pending**: window targeting was unreliable, then the user pressed Escape to stop UI testing. Production remains unchanged; no GitHub publication. macOS interaction is unverified. Use this development package with the matching beta.8 host for acceptance.
+Native Save-picker end-to-end verification is **pending**: window targeting was unreliable, then the user pressed Escape to stop UI testing. Local production is now beta.8 / AI Prompts 1.1.0; no GitHub publication. macOS interaction is unverified. Use this development package with the matching beta.8 host for acceptance.
