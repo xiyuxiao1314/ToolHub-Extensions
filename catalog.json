@@ -118,7 +118,7 @@
     {
       "id": "community.ai-prompts",
       "name": "AI 提示词",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "description": "离线提示词库：分类搜索、新增编辑、删除撤销、Markdown 导入及单条或整库导出。无需账号。",
       "platforms": [
         "windows",
@@ -134,8 +134,8 @@
         "Markdown",
         "导入导出"
       ],
-      "path": "packages/ai-prompts/1.1.0/ai-prompts.toolhub-extension.json",
-      "sha256": "e89b811ec42b8338ffe807f9629b4fc6bd366457f39b8a9d344226040dbbf101",
+      "path": "packages/ai-prompts/1.1.1/ai-prompts.toolhub-extension.json",
+      "sha256": "645b1ba37735a7bc549f1f08c07a64570c07d9723080d84dc1041eb88d6d554a",
       "execution_support": "No execution or network. Windows WebView CRUD/import/reload checked; native Save picker needs manual verification; macOS unverified."
     }
   ]

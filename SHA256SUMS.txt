@@ -3,4 +3,4 @@ a18bea59ff26afde93017b54940c9d6c73e8224cd16398a883e9ac90139fd970  packages/graph
 acaff4d2da3b21829c31564e5a2b5e03f8d1e934547eb73a15d53d9bc109a2b1  packages/workspace/1.0.0/workspace.toolhub-extension.json
 4db08f7d8804d646a3c4816822388045ce315183b65a8f4aac027eeee4acf215  packages/blender/1.0.0/blender.toolhub-extension.json
 3c10f49bb733c775c2534c9ffc8bd9c0cf4865844a41646520ee144131440961  packages/design-studio/0.3.1/design-studio.toolhub-extension.json
-e89b811ec42b8338ffe807f9629b4fc6bd366457f39b8a9d344226040dbbf101  packages/ai-prompts/1.1.0/ai-prompts.toolhub-extension.json
+645b1ba37735a7bc549f1f08c07a64570c07d9723080d84dc1041eb88d6d554a  packages/ai-prompts/1.1.1/ai-prompts.toolhub-extension.json

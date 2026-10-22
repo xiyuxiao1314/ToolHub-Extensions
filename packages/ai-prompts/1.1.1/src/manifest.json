@@ -1,0 +1,27 @@
+{
+  "schema": "toolhub.extension/v2",
+  "id": "community.ai-prompts",
+  "name": "AI 提示词",
+  "description": "离线提示词库：分类搜索、新增编辑、删除撤销、Markdown 导入及单条或整库导出。无需账号。",
+  "version": "1.1.1",
+  "author": "ToolHub",
+  "license": "MIT",
+  "platforms": [
+    "windows",
+    "macos"
+  ],
+  "min_toolhub_version": "0.3.0-beta.8",
+  "permissions": [],
+  "skills": [],
+  "views": [
+    {
+      "id": "community.ai-prompts.library",
+      "label": "AI 提示词",
+      "icon": "prompt",
+      "order": 96,
+      "html": "",
+      "css": "",
+      "script": ""
+    }
+  ]
+}

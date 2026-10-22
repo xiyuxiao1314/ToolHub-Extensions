@@ -2,7 +2,7 @@
 import http from 'node:http'
 import fs from 'node:fs'
 import {fileURLToPath} from 'node:url'
-const file=fileURLToPath(new URL('../packages/ai-prompts/1.1.0/preview.html',import.meta.url))
+const file=fileURLToPath(new URL('../packages/ai-prompts/1.1.1/preview.html',import.meta.url))
 const port=Number(process.env.TOOLHUB_PROMPT_PREVIEW_PORT||19344)
 if(!Number.isInteger(port)||port<1024||port>65535)throw Error('Invalid local preview port')
 const server=http.createServer((req,res)=>{
